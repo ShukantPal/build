@@ -8,11 +8,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Checkout PixiJS
-      uses: actions/checkout@v2
-      with:
-        repository: pixijs/pixi.js
-        path: ${{ inputs.path }}
     - name: Install npm
       run: npm install -g npm@7
     - name: Bootstrap PixiJS
