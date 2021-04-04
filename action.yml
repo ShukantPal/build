@@ -10,9 +10,13 @@ runs:
   steps:
     - name: Install npm
       run: npm install -g npm@7
+      shell: bash
     - name: Bootstrap PixiJS
       run: cd ${{ inputs.path }} && npm ci
+      shell: bash
     - name: Build PixiJS
       run: cd ${{ inputs.path }} && npm run build:dev
+      shell: bash
     - name: Generate types declaration files
       run: cd ${{ inputs.path }} && npm run build:types
+      shell: bash
